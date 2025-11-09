@@ -9,5 +9,9 @@ def voice():
     vr.say("Welcome to Story Line. The connection works!")
     return str(vr)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Story Line is running!"
+
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(host="0.0.0.0", port=10000)
