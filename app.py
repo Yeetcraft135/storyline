@@ -52,14 +52,14 @@ def save_recording():
     # --- Send SMS to you securely ---
     account_sid = os.getenv("TWILIO_ACCOUNT_SID")
     auth_token = os.getenv("TWILIO_AUTH_TOKEN")
-    client = Client(account_sid, auth_token)
-
-    from_number = os.getenv("+18106525229")      # your Twilio number
-    to_number = os.getenv("+18104448220")      # your phone number
+        from_number = "+18106525229"   # your Twilio phone number
+    to_number = "+18104448220"     # your personal cell number
 
     message = client.messages.create(
         body=f"🎙️ New Story Line recording: {recording_url}",
         from_=from_number,
+        to=to_number
+    )
         to=to_number
     )
 
