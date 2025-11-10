@@ -54,8 +54,8 @@ def save_recording():
     auth_token = os.getenv("TWILIO_AUTH_TOKEN")
     client = Client(account_sid, auth_token)
 
-    from_number = os.getenv("8106525229")      # your Twilio number
-    to_number = os.getenv("8104448220")      # your phone number
+    from_number = os.getenv("+18106525229")      # your Twilio number
+    to_number = os.getenv("+18104448220")      # your phone number
 
     message = client.messages.create(
         body=f"🎙️ New Story Line recording: {recording_url}",
