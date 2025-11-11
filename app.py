@@ -17,7 +17,7 @@ def voice():
     gather.say("Before you share your story, please follow these rules.")
     gather.say("No inappropriate, violent, or disrespectful stories are allowed.")
     gather.say("If you agree, press 1 to record your story after the beep.")
-    gather.say("Press 2 to listen to a past story.")
+    gather.say("")
     gather.say("Press 3 to hear the rules again.")
 
     return str(response)
